@@ -1,0 +1,18 @@
+
+version: '3'
+services:
+  my_project:
+    build:
+      context: .
+    environment:
+      - ALCHEMY_PROJECT_ID=${ALCHEMY_PROJECT_ID}
+      - WALLET_PRIVATE_KEY=${WALLET_PRIVATE_KEY}
+    command: bash run_challenge.sh
+
+#Run it with this command:
+# ALCHEMY_PROJECT_ID=your_project_id WALLET_PRIVATE_KEY=your_private_key docker-compose up
+
+#ALCHEMY_PROJECT_ID is the API URL that you get from your alchemy account that has to have an Sepolia project created
+#WALLET_PRIVATE_KEY is the privated key of your wallet for instance MetaMask
+
+
